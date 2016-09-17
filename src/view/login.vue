@@ -30,7 +30,7 @@ export default {
     document.getElementsByClassName('loginButton')[0].onclick=()=>{
       let form=document.getElementsByTagName('form')[0];
       var user=form.user.value,passwd=form.passwd.value;
-      $.ajax('/api/v1/project',{
+      $.ajax('/api/v1/user/login',{
         data:JSON.stringify({
           student_number: user ,
           password: passwd ,

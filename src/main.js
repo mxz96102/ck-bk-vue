@@ -270,9 +270,9 @@ router.map({
 });
 
 router.beforeEach(({to, next}) => {
-/*  if(VueCookie.get('token')==undefined){
+  if(VueCookie.get('token')==undefined){
     to.router.go({name: 'login'});
-  }*/
+  }
   next()
 });
 

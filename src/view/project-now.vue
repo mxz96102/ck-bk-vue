@@ -24,12 +24,10 @@ div.project-now
 <script>
   export default {
     created(){
-      this.allMsg=[{
-        submit_time:"2015-9-9",
-        name:"hahahaha",
-        uploader:"whaifhdi",
-        alter_time:"2015-8-9"
-      }]
+      var __this=this;
+      formKit.get('/project',{},function (data) {
+        __this.allMsg=data;
+      });
     },
     data () {
       return {

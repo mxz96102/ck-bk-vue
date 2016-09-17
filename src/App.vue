@@ -57,7 +57,6 @@ export default {
   directives: {
     Cropper
   },
-
   data () {
     return {
       cropOptions: {
@@ -65,7 +64,6 @@ export default {
         zoomable: false
       },
       token:'',
-
     }
   }
 }

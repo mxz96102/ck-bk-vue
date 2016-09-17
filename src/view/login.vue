@@ -20,7 +20,6 @@ div.login
 export default {
   data () {
     return {
-
     }
   },
   components:{

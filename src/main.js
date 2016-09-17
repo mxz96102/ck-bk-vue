@@ -35,7 +35,7 @@ window.formKit.post=(url,data,success,fail)=>{
       request.setRequestHeader("Authorization", VueCookie.get('token'));
     },
     url: url,
-    data: data,
+    data: JSON.stringify (data),
     done:()=>{
       return success?success:alert('已提交');
     }
@@ -47,7 +47,7 @@ window.formKit.get=(url,data,success,fail)=>{
   $.ajax({
     type:"GET",
     url: url,
-    data: data,
+    data: JSON.stringify (data),
     processData: false,
     done:()=>{
       return success;
@@ -64,7 +64,7 @@ window.formKit.delete=(url,data,success,fail)=>{
     {
       request.setRequestHeader("Authorization", VueCookie.get('token'));
     },
-    data: data,
+    data: JSON.stringify (data),
     processData: false,
     done:()=>{
       return success?success:alert('已删除');
@@ -82,7 +82,7 @@ window.formKit.patch=(url,data,success,fail)=>{
     {
       request.setRequestHeader("Authorization", VueCookie.get('token'));
     },
-    data: data,
+    data: JSON.stringify (data),
     processData: false,
     done:()=>{
       return success?success:alert('已成功');
@@ -99,7 +99,7 @@ window.formKit.head=(url,data,success,fail)=>{
     {
       request.setRequestHeader("Authorization", VueCookie.get('token'));
     },
-    data: data,
+    data: JSON.stringify (data),
     processData: false,
     done:()=>{
       return success?success:alert('已成功');

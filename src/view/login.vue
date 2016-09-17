@@ -31,11 +31,11 @@ export default {
       let form=document.getElementsByTagName('form')[0];
       var user=form.user.value,passwd=form.passwd.value;
       $.ajax('/api/v1/project',{
-        data:{
+        data:JSON.stringify({
           student_number: user ,
           password: passwd ,
           key: ""
-        },
+        }),
         method:"POST"
         ,
         success:(data)=>{
